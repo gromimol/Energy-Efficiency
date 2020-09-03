@@ -1441,15 +1441,17 @@ b, strong {
       margin-top: 20px;
       font-size: 14px; }
 
-  .menu-open .header__center {
-    display: block; }
-  .menu-open .header--white {
-    color: var(--black);
-    background-color: #fff; }
-  .menu-open .burger span {
-    opacity: 0; }
-  .menu-open .burger::before, .menu-open .burger::after {
-    opacity: 1; }
+  .menu-open {
+    overflow: hidden; }
+    .menu-open .header__center {
+      display: block; }
+    .menu-open .header--white {
+      color: var(--black);
+      background-color: #fff; }
+    .menu-open .burger span {
+      opacity: 0; }
+    .menu-open .burger::before, .menu-open .burger::after {
+      opacity: 1; }
 
   .phone {
     font-size: 18px; }
