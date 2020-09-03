@@ -1,0 +1,88 @@
+/*how-work*/
+.how-work{
+	padding: 6.875em 0 4em;
+	.block-title{
+		max-width: 34rem;
+		margin: 0 auto 4.6875em;
+	}
+	.h3{
+		margin-bottom: 0.5em;
+	}
+	p{
+		line-height: 1.5;
+		color: rgba(#1F1E1E, .75);
+	}
+} 
+.how-work__item{
+	width: 33.333%;
+	text-align: center;
+	&:first-child{
+		.icon{
+			&::before{
+				content: '';
+				width: 15em;
+				height: 5.6875em;
+				background: url('../img/icons/how-work/line-1.svg') 0 0 no-repeat;
+				background-size: contain;
+				position: absolute;
+				right: 100%;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&::after{
+				content: '';
+				width: 13.6875em;
+				height: 4.375em;
+				background: url('../img/icons/how-work/line-2.svg') 0 0 no-repeat;
+				background-size: contain;
+				position: absolute;
+				left: calc(100% - 3em);
+				top: 60%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	&:nth-child(2){
+		.icon{
+			&::after{
+				content: '';
+				width: 15em;
+				height: 5.6875em;
+				background: url('../img/icons/how-work/line-3.svg') 0 0 no-repeat;
+				background-size: contain;
+				position: absolute;
+				left: calc(100% - 1.5em);
+				top: 75%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	&:nth-child(3){
+		.icon{
+			&::after{
+				content: '';
+				width: 13.6875em;
+				height: 4.375em;
+				background: url('../img/icons/how-work/line-4.svg') 0 0 no-repeat;
+				background-size: contain;
+				position: absolute;
+				left: calc(100% - 1.75em);
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	.icon{
+		display: table;
+		margin: 0 auto 3em;
+		height: 10em;
+		position: relative;
+		img{
+			width: 100%;
+
+		}
+	}
+	.h5{
+		line-height: 1.3;
+	}
+}

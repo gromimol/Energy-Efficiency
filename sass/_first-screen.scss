@@ -1,0 +1,162 @@
+/*first-screen*/ 
+.first-screen{
+	background: #1F1E1E url('../img/first-screen_bg.jpg') 100% 100% no-repeat;
+	background-size: cover;
+	padding: 250px 0 70px;
+	color: #fff;
+	.h3{
+		margin-bottom: 1em;
+	}
+}
+.calculator{
+	margin-bottom: 135px;
+	form{
+		width: 100%;
+	}
+}
+.calculator__content{
+	flex-grow: 1;
+	background-color: #fff;
+	border-radius: 10px 0 0 10px;
+	padding: 0 35px;
+	min-height: 104px;
+}
+.calculator__submit{
+	flex: none;
+	width: 240px;
+	border-radius: 0 10px 10px 0;
+	.submit{
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--yellow);
+		border: 3px solid var(--yellow);
+		outline: none;
+		border-radius: 0 10px 10px 0;
+		font-size: 18px;
+		transition: all .3s;
+		&:hover{
+			background-color: #fff;
+		}
+		.icon{
+			margin-right: 20px;
+			height: 25px;
+		}
+	}
+}
+.calculator-input{
+	position: relative;
+	flex-grow: 1 ;
+	display: flex;
+	align-items: center;
+	&:first-child{
+		border-radius: 10px 0 0 10px;
+		overflow: hidden;
+	}
+	&:last-child{
+		padding-right: 40px;
+	}
+	&:not(:last-child){
+		padding-right: 20px;
+		margin-right: 20px;
+		&::after{
+			content: '';
+			width: 1px;
+			height: 40px;
+			background-color: rgba(#1F1E1E, .1);
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&--address{
+		display: flex;
+		align-items: center;
+		min-width: 290px;
+		.icon{
+			margin-right: 20px;
+		}
+	}
+	input{
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: none;
+		outline: none;
+		background-color: #fff;
+		font-family: var(--main-font);
+		font-size: 16px;
+		color: #1F1E1E;
+	}
+	.tip{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.select{
+		width: 170px;
+	}
+}
+.tip{
+	position: relative;
+	.icon{
+		width: 20px;
+		height: 20px;
+		img{
+			width: 100%;
+		}
+		&:hover{
+			& + .tip-text{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+.tip-text{
+	position: absolute;
+	background: #FFFFFF;
+	border: 1px solid #DADADA;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
+	padding: 1em;
+	font-size: 14px;
+	line-height: 1.5;
+	min-width: 200px;
+	top: calc(100% + 16px);
+	left: 50%;
+	transform: translateX(-50%);
+	color: var(--black);
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity .3s;
+}
+
+.arrow-down{
+	display: block;
+	width: 24px;
+	height: 10px;
+	color:#fff;
+	margin: 0 auto;
+	svg{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

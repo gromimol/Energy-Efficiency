@@ -1,0 +1,103 @@
+/*banner-calculate*/ 
+.banner-calculate{
+	padding: 3.4375em 0 4.375em;
+	background-position: 0 0, 100% 100%;
+	background-color: #000;
+	background-size: 25em, 35em, cover;
+	background-image:  
+						url('../img/bg/banner-calculate-1.png'),
+						url('../img/bg/banner-calculate-2.png'),
+						linear-gradient(to bottom, #FFD568, #FFB905);
+	background-repeat: no-repeat, no-repeat;
+	.h3{
+		margin-bottom: 1em;
+	}
+}
+.banner-calculate-form{
+	form{
+		width: 100%;
+	}
+	.agree{
+		margin-top: 50px;
+	}
+}
+.banner-calculate-form__content{
+	display: flex;
+	justify-content: center;
+}
+.banner-calculate__input{
+	&:not(:last-child){
+		margin-right: 20px;
+	}
+}
+.banner-calculate__input{
+	width: 260px;
+	&:last-child{
+		width: 200px;
+		.btn{
+			width: 100%;
+		}
+	}
+	input:not([type="submit"]){
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: none;
+		outline: none;
+		border-radius: 10px;
+		padding-left: 25px;
+		font-size: 16px;
+		font-family: var(--main-font);
+	}
+	.btn{
+		border-radius: 10px;
+		height: 100%;
+	}
+}
+
+.agree{
+	max-width: 300px;
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 1.4;
+	color: rgba(#1F1E1E, .5);
+	input{
+		display: none;
+		&:checked + label{
+			&::before{
+				background-image: url('../img/icons/check.svg');
+			}
+		}
+	}
+	label{
+		display: block;
+		position: relative;
+		padding-left: 40px;
+		&::before{
+			content: '';
+			width: 26px;
+			height: 26px;
+			border: 2px solid rgba(#000, .3);
+			border-radius: 50%;
+			background-repeat: no-repeat;
+			background-position: center;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+		a{
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
