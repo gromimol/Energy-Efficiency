@@ -155,7 +155,9 @@ b, strong{
 .svg-sprite{
 	display: none;
 }
-
+.mobile{
+	display: none;
+}
 ::-webkit-input-placeholder {font-family: var(--main-font);font-size: 16px;color: #1F1E1E;  }
 ::-moz-placeholder          {font-family: var(--main-font);font-size: 16px;color: #1F1E1E;  } /* Firefox 19+ */
 :-moz-placeholder           {font-family: var(--main-font);font-size: 16px;color: #1F1E1E;  } /* Firefox 18- */

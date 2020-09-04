@@ -31,11 +31,11 @@
 	}
 	.prev-slide{
 		left: 0;
-		transform: translate(-100%, calc(-50% - 40px));
+		transform: translate(-100%, calc(-50% - 10px));
 	}
 	.next-slide{
 		right: 0;
-		transform: translate(100%, calc(-50% - 40px));
+		transform: translate(100%, calc(-50% - 10px));
 	}
 }
 .our-project__slide{
