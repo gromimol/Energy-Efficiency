@@ -888,7 +888,7 @@ b, strong {
             transform: translateY(-50%); }
   .how-work__item .icon {
     display: table;
-    margin: 0 auto 3em;
+    margin: 0 auto 1em;
     height: 10em;
     position: relative; }
     .how-work__item .icon img {
