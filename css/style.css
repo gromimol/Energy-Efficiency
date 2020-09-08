@@ -1269,6 +1269,113 @@ b, strong {
   .footer__link .icon {
     margin-right: 10px; }
 
+/*popup*/
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 30;
+  display: none; }
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  max-width: 760px;
+  height: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 35;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .popup.active {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .popup .h3 {
+    margin-bottom: 0.5em; }
+  .popup .btn {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(-70.71%, #ffffff), color-stop(65.19%, rgba(255, 255, 255, 0))), #ffcc00;
+    background: linear-gradient(180deg, #ffffff -70.71%, rgba(255, 255, 255, 0) 65.19%), #ffcc00;
+    border-radius: 10px;
+    border: none;
+    color: #000; }
+    .popup .btn:hover {
+      opacity: 0.8; }
+  .popup .banner-calculate__input {
+    width: 160px; }
+    .popup .banner-calculate__input input:not([type="submit"]) {
+      border: 1px solid rgba(6, 6, 6, 0.15);
+      border-radius: 10px;
+      padding-left: 15px; }
+    .popup .banner-calculate__input--phone {
+      width: 200px; }
+  .popup .agree {
+    margin-top: 45px; }
+
+.close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 30px;
+  right: 30px; }
+  .close::before, .close::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba(31, 30, 30, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 0; }
+  .close::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .close::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
+.popup__notice {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(31, 30, 30, 0.75);
+  margin-bottom: 2.2em; }
+
+.popup-form {
+  display: none; }
+  .popup-form.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.hidden {
+  display: none; }
+
 /*media*/
 @media (max-width: 1360px) {
   html {
@@ -1385,7 +1492,7 @@ b, strong {
 
   .main-page .header {
     position: relative;
-    background-color: #1F1E1E; }
+    background-color: #1f1e1e; }
 
   .first-screen {
     padding: 50px 0; }
@@ -1410,14 +1517,14 @@ b, strong {
       display: block;
       width: 100%;
       height: 2px;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(-62.5%, #FFFFFF), color-stop(116.67%, rgba(255, 255, 255, 0))), #FFCC00;
-      background: linear-gradient(180deg, #FFFFFF -62.5%, rgba(255, 255, 255, 0) 116.67%), #FFCC00;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(-62.5%, #ffffff), color-stop(116.67%, rgba(255, 255, 255, 0))), #ffcc00;
+      background: linear-gradient(180deg, #ffffff -62.5%, rgba(255, 255, 255, 0) 116.67%), #ffcc00;
       -webkit-box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.39);
               box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.39); }
       .burger span:not(:last-child) {
         margin-bottom: 4px; }
     .burger::after, .burger::before {
-      content: '';
+      content: "";
       width: 100%;
       height: 2px;
       background-color: var(--black);
@@ -1632,27 +1739,32 @@ b, strong {
   html {
     font-size: 14px; }
 
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: 3rem;
     font-weight: 300;
     line-height: 1.1; }
 
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 2.5rem;
     font-weight: 300;
     line-height: 1.1; }
 
-  h3, .h3 {
+  h3,
+  .h3 {
     font-size: 2.3rem;
     font-weight: 300;
     line-height: 1.1; }
 
-  h4, .h4 {
+  h4,
+  .h4 {
     font-size: 2rem;
     font-weight: 300;
     line-height: 1.1; }
 
-  h5, .h5 {
+  h5,
+  .h5 {
     font-size: 18px; }
 
   .header {
@@ -1666,7 +1778,9 @@ b, strong {
   .calculator {
     margin-bottom: 50px; }
 
-  .calculator-input, .calculator-input:not(:last-child), .calculator-input:first-child,
+  .calculator-input,
+  .calculator-input:not(:last-child),
+  .calculator-input:first-child,
   .calculator__submit {
     width: 100%;
     max-width: none; }
@@ -1686,7 +1800,7 @@ b, strong {
       margin-bottom: 10px;
       height: 150px; }
     .how-work__item:first-child .icon::before {
-      content: '';
+      content: "";
       display: block;
       width: 70px;
       height: 118px;
@@ -1695,7 +1809,7 @@ b, strong {
       left: 0;
       top: 0; }
     .how-work__item:nth-child(2) .icon::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 81px;
@@ -1707,7 +1821,7 @@ b, strong {
       -webkit-transform: translateY(20%);
               transform: translateY(20%); }
     .how-work__item:nth-child(3) .icon::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 62px;
@@ -1751,7 +1865,7 @@ b, strong {
     padding: 50px 0; }
 
   .banner .h3 {
-    font-size: 32зч; }
+    font-size: 32px; }
 
   .btn {
     font-size: 16px; }
@@ -1864,7 +1978,21 @@ b, strong {
     padding: 20px; }
 
   .btn {
-    border-radius: 10px; } }
+    border-radius: 10px; }
+
+  .popup {
+    height: auto;
+    padding: 50px 30px;
+    display: block; }
+
+  .popup__notice {
+    font-size: 14px; }
+    .popup__notice br {
+      display: none; }
+
+  .popup .banner-calculate__input,
+  .popup .banner-calculate__input--phone {
+    width: 100%; } }
 /*767*/
 @media (max-width: 480px) {
   .first-screen .h3 {
