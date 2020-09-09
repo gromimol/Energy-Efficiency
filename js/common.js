@@ -84,4 +84,19 @@ $(document).ready(function () {
     $(this).addClass("hidden");
     $(".popup-form").addClass("active");
   });
+
+  $(".project-inner__slider").slick({
+    dots: true,
+    prevArrow: '<span class="prev-slide--lt"></span>',
+    nextArrow: '<span class="next-slide--lt"></span>',
+  });
+
+  $(".project-tab-list a").on("click", function (e) {
+    e.preventDefault();
+
+    let id = $(this).data("tab");
+    $(".tab, .project-tab-list a").removeClass("active");
+    $(this).addClass("active");
+    $("#" + id).addClass("active");
+  });
 });
