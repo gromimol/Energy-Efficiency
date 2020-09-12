@@ -56,6 +56,26 @@ $(document).ready(function () {
       },
     ],
   });
+  $(window).resize(function () {
+    if ($(window).width() < 480) {
+      $(".slider-on-mobile").slick({
+        prevArrow:
+          '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+        nextArrow:
+          '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+      });
+    } else {
+      $(".slider-on-mobile").slick("unslick");
+    }
+  });
+  if ($(window).width() < 480) {
+    $(".slider-on-mobile").slick({
+      prevArrow:
+        '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+      nextArrow:
+        '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+    });
+  }
 
   $(".burger").on("click", function () {
     $("body").toggleClass("menu-open");
@@ -99,4 +119,24 @@ $(document).ready(function () {
     $(this).addClass("active");
     $("#" + id).addClass("active");
   });
+
+  // Плюс/минус товар для корзины
+  (function () {
+    $(".minus").on("click", function () {
+      var data = $(this).closest(".product-counter").find($(".count-input"));
+      var dataVal = data.val();
+      if (dataVal > 0) {
+        data.val(parseInt(dataVal) - 1);
+      }
+      return false;
+    });
+
+    $(".plus").click(function () {
+      var data = $(this).closest(".product-counter").find($(".count-input"));
+      var dataVal = data.val();
+      if (dataVal >= 100) return;
+      data.val(parseInt(dataVal) + 1);
+      return false;
+    });
+  })();
 });

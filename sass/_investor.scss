@@ -1,0 +1,103 @@
+.investor {
+    padding: 50px 0;
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(#1f1f1f, .75);
+    }
+}
+
+.investor-project {
+    margin-bottom: 80px;
+}
+
+.investor-project__img,
+.investor-project__descr {
+    width: calc(50% - 50px);
+}
+
+.investor-project__img {
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.investor-project__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .h3 {
+        line-height: 1.1;
+        margin-bottom: 25px;
+    }
+
+
+
+    .btn {
+        margin-top: 40px;
+    }
+}
+
+.investor-features {
+    padding: 70px 0;
+
+    .h3 {
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        margin-top: 40px;
+    }
+}
+
+.investor-features__left {
+    width: 50%;
+}
+
+.investor-features__right {
+    width: 43%;
+}
+
+.investor-features__list {
+    counter-reset: number;
+
+    li {
+        position: relative;
+        padding-left: 130px;
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+
+        &::before {
+            content: counter(number);
+            counter-increment: number;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            flex: none;
+            border-radius: 50%;
+            border: 8px solid var(--yellow);
+            box-shadow: 0px 5px 11px rgba(255, 204, 0, 0.3);
+            font-size: 40px;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: -4px;
+        }
+    }
+
+    .h4 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+}
