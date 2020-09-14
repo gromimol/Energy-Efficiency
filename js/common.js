@@ -21,12 +21,9 @@ $(document).ready(function () {
   // slider
   $(".projects-slider").slick({
     slidesToShow: 3,
-    prevArrow:
-      '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
-    nextArrow:
-      '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
-    responsive: [
-      {
+    prevArrow: '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+    nextArrow: '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+    responsive: [{
         breakpoint: 1023,
         settings: {
           slidesToShow: 2,
@@ -43,26 +40,20 @@ $(document).ready(function () {
 
   $(".our-projects-slider").slick({
     slidesToShow: 2,
-    prevArrow:
-      '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
-    nextArrow:
-      '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
+    prevArrow: '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+    nextArrow: '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+    responsive: [{
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
       },
-    ],
+    }, ],
   });
   $(window).resize(function () {
     if ($(window).width() < 480) {
       $(".slider-on-mobile").slick({
-        prevArrow:
-          '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
-        nextArrow:
-          '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+        prevArrow: '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+        nextArrow: '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
       });
     } else {
       $(".slider-on-mobile").slick("unslick");
@@ -70,10 +61,8 @@ $(document).ready(function () {
   });
   if ($(window).width() < 480) {
     $(".slider-on-mobile").slick({
-      prevArrow:
-        '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
-      nextArrow:
-        '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+      prevArrow: '<span class="prev-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M21.1714 1.99927L2.17139 19.9993L21.1714 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+      nextArrow: '<span class="next-slide"><svg width="23" height="40" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M2.17334 1.99927L21.1733 19.9993L2.17334 37.9993" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
     });
   }
 
@@ -89,6 +78,12 @@ $(document).ready(function () {
 
     $("#overlay").show();
     $("#interview").addClass("active");
+  });
+  $(".js--feedback").on("click", function (e) {
+    e.preventDefault();
+
+    $("#overlay").show();
+    $("#feedback").addClass("active");
   });
 
   $("#overlay, .close").on("click", function (e) {
@@ -139,4 +134,14 @@ $(document).ready(function () {
       return false;
     });
   })();
+
+  if ($(window).width() < 1200) {
+    $('html').on('click', function () {
+      $('.tip').toggleClass('active');
+    });
+    $('.tip .icon').on('click', function (e) {
+      e.stopPropagation();
+      $(this).parent().toggleClass('active');
+    })
+  }
 });

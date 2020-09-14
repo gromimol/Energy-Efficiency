@@ -123,6 +123,13 @@
 .tip {
 	position: relative;
 
+	&.active {
+		.tip-text {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
 	.icon {
 		width: 20px;
 		height: 20px;
@@ -131,10 +138,12 @@
 			width: 100%;
 		}
 
-		&:hover {
-			&+.tip-text {
-				opacity: 1;
-				visibility: visible;
+		@media(min-width: 1200px) {
+			&:hover {
+				&+.tip-text {
+					opacity: 1;
+					visibility: visible;
+				}
 			}
 		}
 	}

@@ -1,24 +1,29 @@
 /*how-work*/
-.how-work{
+.how-work {
 	padding: 6.875em 0 4em;
-	.block-title{
+
+	.block-title {
 		max-width: 34rem;
 		margin: 0 auto 4.6875em;
 	}
-	.h3{
+
+	.h3 {
 		margin-bottom: 0.5em;
 	}
-	p{
+
+	p {
 		line-height: 1.5;
 		color: rgba(#1F1E1E, .75);
 	}
-} 
-.how-work__item{
+}
+
+.how-work__item {
 	width: 33.333%;
 	text-align: center;
-	&:first-child{
-		.icon{
-			&::before{
+
+	&:first-child {
+		.icon {
+			&::before {
 				content: '';
 				width: 15em;
 				height: 5.6875em;
@@ -29,7 +34,8 @@
 				top: 50%;
 				transform: translateY(-50%);
 			}
-			&::after{
+
+			&::after {
 				content: '';
 				width: 13.6875em;
 				height: 4.375em;
@@ -42,9 +48,10 @@
 			}
 		}
 	}
-	&:nth-child(2){
-		.icon{
-			&::after{
+
+	&:nth-child(2) {
+		.icon {
+			&::after {
 				content: '';
 				width: 15em;
 				height: 5.6875em;
@@ -57,9 +64,10 @@
 			}
 		}
 	}
-	&:nth-child(3){
-		.icon{
-			&::after{
+
+	&:nth-child(3) {
+		.icon {
+			&::after {
 				content: '';
 				width: 13.6875em;
 				height: 4.375em;
@@ -72,17 +80,108 @@
 			}
 		}
 	}
-	.icon{
+
+	.icon {
 		display: table;
 		margin: 0 auto 1em;
 		height: 10em;
 		position: relative;
-		img{
+
+		img {
 			width: 100%;
 
 		}
 	}
-	.h5{
+
+	.h5 {
 		line-height: 1.3;
+	}
+}
+
+.how-work-items--four-col {
+	.how-work__item {
+		width: 25%;
+
+		&:first-child {
+			.icon {
+				&::before {
+					content: '';
+					width: 9.5625em;
+					height: 2.625em;
+					background: url('../img/icons/how-work/line-5.png') 0 0 no-repeat;
+					position: absolute;
+					background-size: contain;
+					right: 100%;
+					top: 40%;
+					transform: translateY(-50%);
+				}
+
+				&::after {
+					content: '';
+					width: 8.375em;
+					height: 2.375em;
+					background: url('../img/icons/how-work/line-6.png') 0 0 no-repeat;
+					position: absolute;
+					background-size: contain;
+					left: 90%;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			.icon {
+				&::after {
+					content: '';
+					width: 7.875em;
+					height: 2.625em;
+					background: url('../img/icons/how-work/line-7.png') 0 0 no-repeat;
+					position: absolute;
+					background-size: contain;
+					left: calc(100% - 1em);
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+
+			}
+		}
+
+		&:nth-child(3) {
+			.icon {
+				&::after {
+					content: '';
+					width: 7.875em;
+					height: 1.75em;
+					background: url('../img/icons/how-work/line-8.png') 0 0 no-repeat;
+					position: absolute;
+					background-size: contain;
+					left: calc(100% - 1em);
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+
+			}
+		}
+
+		&:nth-child(4) {
+			.icon {
+				&::after {
+					content: '';
+					width: 11.75em;
+					height: 3.5625em;
+					background: url('../img/icons/how-work/line-9.png') 0 0 no-repeat;
+					position: absolute;
+					background-size: contain;
+					left: calc(100% - 1em);
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+
+			}
+		}
 	}
 }

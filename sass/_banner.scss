@@ -1,17 +1,29 @@
 /*banner*/
-.banner{
+.banner {
 	padding: 6.25em 0;
 	text-align: center;
 	color: #fff;
 	background-position: 0 0, 100% 100%;
 	background-color: #000;
 	background-size: contain, contain, cover;
-	background-image:  
-						url('../img/bg/banner-bg-1.png'),
-						url('../img/bg/banner-bg-2.png'),
-						linear-gradient(180deg, rgba(255, 255, 255, 0.35) -89.2%, rgba(255, 255, 255, 0) 100%);
+	background-image:
+		url('../img/bg/banner-bg-1.png'),
+		url('../img/bg/banner-bg-2.png'),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.35) -89.2%, rgba(255, 255, 255, 0) 100%);
 	background-repeat: no-repeat, no-repeat;
-	.h3{
+
+	.h3 {
 		margin-bottom: 1em;
+
+		&.mb-20 {
+			margin-bottom: 20px;
+		}
 	}
-} 
+
+	p {
+		font-size: 16px;
+		line-height: 1.5;
+		color: rgba(255, 255, 255, 0.75);
+		margin-bottom: 40px;
+	}
+}

@@ -181,11 +181,7 @@
 			display: block;
 			width: 100%;
 			height: 2px;
-			background: linear-gradient(180deg,
-					#ffffff -62.5%,
-					rgba(255, 255, 255, 0) 116.67%),
-				#ffcc00;
-			box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.39);
+			background: var(--black);
 
 			&:not(:last-child) {
 				margin-bottom: 4px;
@@ -571,6 +567,16 @@
 	.form-page-cta p {
 		padding-left: 20px;
 	}
+
+	.project-name {
+		font-size: 18px;
+	}
+
+	.project-data {
+		p {
+			font-size: 16px;
+		}
+	}
 }
 
 /*991*/
@@ -641,6 +647,7 @@
 		justify-content: center;
 	}
 
+	.how-work-items--four-col .how-work__item,
 	.how-work__item {
 		width: 100%;
 		max-width: 400px;
@@ -648,7 +655,11 @@
 
 		.icon {
 			margin-bottom: 10px;
-			height: 150px;
+			height: 130px;
+
+			img {
+				max-width: 200px;
+			}
 		}
 
 		&:first-child {
@@ -666,7 +677,8 @@
 			}
 		}
 
-		&:nth-child(2) {
+		&:nth-child(2),
+		&:nth-child(4) {
 			.icon {
 				&::before {
 					content: "";
@@ -706,7 +718,7 @@
 	}
 
 	.how-work .block-title {
-		margin-bottom: 40px;
+		margin-bottom: 60px;
 	}
 
 	.how-work {
@@ -1410,11 +1422,37 @@
 
 		.slick-list {
 			overflow: visible;
+			padding: 10px 0 30px;
 		}
 
 		.blog-item {
 			padding: 0 10px;
 			margin: 0;
+			position: relative;
+			background: #F9F9F9;
+
+			&::after {
+				content: '';
+				width: calc(100% - 20px);
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 10px;
+				box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+				border-radius: 20px;
+			}
+
+			.h4 {
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+
+			p {
+				line-height: 1.5;
+				font-size: 14px;
+				padding: 0 25px 25px 25px;
+				color: var(--gray);
+			}
 		}
 
 		.prev-slide {
@@ -1652,6 +1690,27 @@
 		font-size: 14px;
 	}
 
+	.project-item.slick-slide {
+		margin: 0 10px 0;
+	}
+
+	.projects-list.slider-on-mobile {
+		max-width: 290px;
+		margin-left: auto !important;
+		margin-right: auto !important;
+
+		.slick-arrow {
+			top: 42%;
+		}
+
+		.next-slide {
+			right: 4px;
+		}
+
+		.prev-slide {
+			left: -4px;
+		}
+	}
 
 }
 
