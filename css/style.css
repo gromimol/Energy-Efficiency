@@ -1422,6 +1422,7 @@ strong {
       -ms-flex-align: start;
           align-items: flex-start; }
   .project-inner__descr .h4 {
+    font-size: 2.25rem;
     line-height: 1.3;
     margin-bottom: 0.3em; }
   .project-inner__descr .btn--lg {
@@ -2862,7 +2863,10 @@ a.about-item__title:hover::after {
     font-size: 18px; }
 
   .project-data p {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  .project-inner__descr .h4 {
+    font-size: 2.5rem; } }
 /*991*/
 @media (max-width: 767px) {
   html {

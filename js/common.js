@@ -137,7 +137,7 @@ $(document).ready(function () {
 
   if ($(window).width() < 1200) {
     $('html').on('click', function () {
-      $('.tip').toggleClass('active');
+      $('.tip').removeClass('active');
     });
     $('.tip .icon').on('click', function (e) {
       e.stopPropagation();
