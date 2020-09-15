@@ -1063,7 +1063,8 @@
 		}
 	}
 
-	.current-projects--all .current-project-img {
+	.current-projects--all .current-project-img,
+	.current-projects--all .current-project-img.show {
 		display: none;
 	}
 

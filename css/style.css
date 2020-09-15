@@ -1001,7 +1001,10 @@ strong {
 .current-project-img {
   position: absolute;
   right: -5%;
-  top: -14%; }
+  top: -14%;
+  display: none; }
+  .current-project-img.show {
+    display: block; }
 
 .projects-slider {
   margin: 0 -1.25em;
@@ -3246,7 +3249,8 @@ a.about-item__title:hover::after {
     .project-tab-list li a {
       font-size: 32px; }
 
-  .current-projects--all .current-project-img {
+  .current-projects--all .current-project-img,
+  .current-projects--all .current-project-img.show {
     display: none; }
 
   .about-descr {

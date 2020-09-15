@@ -37,6 +37,11 @@
   position: absolute;
   right: -5%;
   top: -14%;
+  display: none;
+
+  &.show {
+    display: block;
+  }
 }
 
 .projects-slider {

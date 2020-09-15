@@ -1,3 +1,6 @@
+$(window).on('load', function () {
+  $('.current-project-img').addClass('show');
+})
 $(document).ready(function () {
   // select
   $(".select")
